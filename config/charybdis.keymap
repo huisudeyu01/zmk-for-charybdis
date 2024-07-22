@@ -1,5 +1,4 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 
@@ -54,17 +53,6 @@
 &kp COLON         &kp Z      &kp X            &kp C      &kp V       &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp F9         &kp F10       &kp F11    &kp F12   &kp QUESTION
                                               &to 1      &kp K_UNDO  &kp LSHFT               &kp RIGHT_CONTROL      &kp BACKSPACE
                                                          &kp SPACE   &mkp LCLK               &mkp RCLK
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-&to 0   &trans  &trans  &trans  &bt BT_CLR_ALL  &bt BT_CLR    &bootloader  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans        &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans        &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans        &trans       &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans          &trans        &trans       &trans
-                                &trans          &mkp LCLK     &mkp RCLK
             >;
         };
     };
