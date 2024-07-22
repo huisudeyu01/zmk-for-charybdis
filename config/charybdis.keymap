@@ -49,7 +49,7 @@
         layer_2 {
             bindings = <
 &to 0             &kp TILDE  &kp EXCLAMATION  &kp POUND  &kp DOLLAR  &kp PERCENT             &kp CARET              &kp AMPERSAND  &kp ASTERISK  &kp MINUS  &kp PLUS  &kp FSLH
-&kp UNDERSCORE    &kp EQUAL  &kp PIPE         &kp GRAVE  &kp P       &kp LBKT                &kp RBKT               &kp F1         &kp F2        &kp F3     &kp F4    &kp K_SLEEP
+&kp UNDERSCORE    &kp EQUAL  &kp PIPE         &kp GRAVE  &kp P       &kp LEFT_BRACKET        &kp RBKT               &kp F1         &kp F2        &kp F3     &kp F4    &kp K_SLEEP
 &kp SINGLE_QUOTE  &kp A      &kp F            &kp G      &kp H       &kp LBRC                &kp RIGHT_BRACE        &kp F5         &kp F6        &kp F7     &kp F8    &kp DOUBLE_QUOTES
 &kp COLON         &kp Z      &kp X            &kp C      &kp V       &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp F9         &kp F10       &kp F11    &kp F12   &kp QUESTION
                                               &to 1      &kp K_UNDO  &kp LSHFT               &kp RIGHT_CONTROL      &kp BACKSPACE
