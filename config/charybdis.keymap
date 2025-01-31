@@ -26,47 +26,34 @@
 
         layer_0 {
             bindings = <
-&kp LEFT_SHIFT  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5              &kp NUMBER_6  &kp N7         &kp NUMBER_8  &kp N9     &kp NUMBER_0  &kp C_AC_CLOSE
-&kp ESCAPE      &kp Q         &kp W         &kp E         &kp R         &kp T               &kp Y         &kp U          &kp I         &kp O      &kp P         &kp F2
-&kp CAPS        &kp A         &kp S         &kp D         &kp F         &kp G               &kp H         &kp J          &kp K         &kp L      &kp UP_ARROW  &kp PAGE_UP
-&kp LEFT_ALT    &kp Z         &kp X         &kp C         &kp V         &kp B               &kp N         &kp M          &kp LEFT      &kp RIGHT  &kp DOWN      &kp PAGE_DOWN
-                                            &kp SPACE     &to 1         &kp LEFT_CONTROL    &kp DEL       &kp BACKSPACE
-                                                          &mkp LCLK     &mkp RCLK           &kp ENTER
+&kp LC(LEFT_SHIFT)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5       &kp NUMBER_6      &kp N7         &kp N8         &kp N9         &kp NUMBER_0   &kp PAGE_UP
+&kp ESCAPE          &kp Q         &kp W         &kp E         &kp R         &kp T        &kp Y             &kp U          &kp I          &kp O          &kp P          &kp PAGE_DOWN
+&kp CAPS            &kp A         &kp S         &kp D         &kp F         &kp G        &kp H             &kp J          &kp K          &kp L          &kp LC(PLUS)   &kp F2
+&kp LEFT_ALT        &kp Z         &kp X         &kp C         &kp V         &kp B        &kp N             &kp M          &kp LC(LS(C))  &kp LC(LS(V))  &kp LC(MINUS)  &kp TAB
+                                                &kp SPACE     &kp ENTER     &to 1        &kp LEFT_GUI      &kp BACKSPACE
+                                                              &mkp LCLK     &mkp RCLK    &kp LEFT_CONTROL
             >;
         };
 
         layer_1 {
             bindings = <
-&kp TAB       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5              &kp NUMBER_6  &kp N7         &kp NUMBER_8  &kp N9      &kp NUMBER_0   &kp LEFT_GUI
-&kp COLON     &kp Q         &kp W         &kp E         &kp R         &kp T               &kp Y         &kp U          &kp I         &kp O       &kp P          &mo 2
-&to 0         &kp A         &kp S         &kp D         &kp F         &kp G               &kp H         &kp J          &kp K         &kp L       &kp SEMICOLON  &kp DOUBLE_QUOTES
-&kp QUESTION  &kp Z         &kp X         &kp C         &kp V         &kp B               &kp N         &kp M          &kp COMMA     &kp PERIOD  &kp LESS_THAN  &kp GT
-                                          &kp SPACE     &kp CAPS      &kp LEFT_CONTROL    &kp DEL       &kp BACKSPACE
-                                                        &mkp LCLK     &mkp RCLK           &kp ENTER
+&kp LC(LEFT_SHIFT)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5       &kp NUMBER_6      &kp N7         &kp N8     &kp N9      &kp N0         &kp PG_UP
+&kp ESCAPE          &kp Q         &kp W         &kp E         &kp R         &kp T        &kp Y             &kp U          &kp I      &kp O       &kp P          &kp PAGE_DOWN
+&to 0               &kp A         &kp S         &kp D         &kp F         &kp G        &kp H             &kp J          &kp K      &kp L       &kp SEMICOLON  &kp DOUBLE_QUOTES
+&kp QUESTION        &kp Z         &kp X         &kp C         &kp V         &kp B        &kp N             &kp M          &kp COMMA  &kp PERIOD  &kp LT         &kp GT
+                                                &kp SPACE     &kp ENTER     &mo 2        &kp LEFT_GUI      &kp BACKSPACE
+                                                              &mkp LCLK     &mkp RCLK    &kp LEFT_CONTROL
             >;
         };
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans  &trans        &trans        &trans        &trans      &trans        &trans        &trans  &trans  &trans
-&trans  &trans  &trans  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans
-&trans  &trans  &trans  &trans        &trans        &trans        &trans      &trans        &trans        &trans  &trans  &trans
-&trans  &trans  &trans  &trans        &trans        &trans        &trans      &trans        &trans        &trans  &trans  &trans
-                        &trans        &trans        &trans        &trans      &trans
-                                      &trans        &trans        &trans
-            >;
-
-            trackball-bindings = <&tsl>;//滚轮层
-        };
-
-        layer_5 {
-            bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans     &mkp MCLK  &trans     &trans       &trans     &trans     &mkp MCLK  &trans     &trans  &trans
-&trans  &trans  &mkp RCLK  &trans     &mkp LCLK  &trans       &trans     &mkp LCLK  &trans     &mkp RCLK  &trans  &trans
-                           &trans     &mkp LCLK  &mkp RCLK    &mkp RCLK  &mkp LCLK
-                                      &trans     &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &bootloader  &trans        &trans        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans        &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans       &trans
+                                &trans  &trans    &trans
             >;
 
             trackball-bindings = <&tmv_fine>;//精准指针层
