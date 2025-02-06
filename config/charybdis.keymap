@@ -33,6 +33,7 @@
                                                 &kp SPACE     &kp ENTER     &to 1        &kp LEFT_GUI      &kp BACKSPACE
                                                               &mkp LCLK     &mkp RCLK    &kp LEFT_CONTROL
             >;
+
             trackball-bindings = <&tmv_coarse>;
         };
 
@@ -45,6 +46,7 @@
                                                 &kp SPACE     &kp ENTER     &mo 2        &kp LEFT_GUI      &kp BACKSPACE
                                                               &mkp LCLK     &mkp RCLK    &kp LEFT_CONTROL
             >;
+
             trackball-bindings = <&tmv_coarse>;
         };
 
@@ -57,6 +59,7 @@
                         &trans  &trans  &trans    &trans       &trans
                                 &trans  &trans    &trans
             >;
+
             trackball-bindings = <&tmv_coarse>;
         };
     };
