@@ -33,6 +33,8 @@
                                                 &kp SPACE     &kp ENTER     &to 1        &kp LEFT_GUI      &kp BACKSPACE
                                                               &mkp LCLK     &mkp RCLK    &kp LEFT_CONTROL
             >;
+
+            trackball-bindings = <&tmv_coarse>;
         };
 
         layer_1 {
@@ -44,6 +46,8 @@
                                                 &kp SPACE     &kp ENTER     &mo 2        &kp LEFT_GUI      &kp BACKSPACE
                                                               &mkp LCLK     &mkp RCLK    &kp LEFT_CONTROL
             >;
+
+            trackball-bindings = <&tmv_coarse>;
         };
 
         layer_2 {
@@ -56,7 +60,7 @@
                                 &trans  &trans    &trans
             >;
 
-            trackball-bindings = <&tmv_fine>;//精准指针层
+            trackball-bindings = <&tmv_coarse>;
         };
     };
 };
