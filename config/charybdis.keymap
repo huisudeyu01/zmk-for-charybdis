@@ -2,32 +2,13 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/outputs.h>
 
 &lt {
     tapping-term-ms = <200>;
     flavor = "balanced";
     quick-tap-ms = <150>;
 };
-
-&key_repeat {
-};
-
-&msc {
-};
-
-&bootloader {
-};
-
-/ {
-    combos {
-        compatible = "zmk,combos";
-
-        escc {
-            bindings = <&kp ESC>;
-            key-positions = <17 18>;
-        };
-    };
 
     keymap {
         compatible = "zmk,keymap";
