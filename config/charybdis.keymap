@@ -10,6 +10,15 @@
     quick-tap-ms = <150>;
 };
 
+&key_repeat {
+};
+
+&msc {
+};
+
+&bootloader {
+};
+
 / {
     combos {
         compatible = "zmk,combos";
