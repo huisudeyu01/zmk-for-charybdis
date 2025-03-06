@@ -34,13 +34,13 @@
 
         home {
             bindings = <&kp HOME>;
-            key-positions = <52 31>;
+            key-positions = <48 15>;
             layers = <0 1>;
         };
 
         end {
             bindings = <&kp END>;
-            key-positions = <52 32>;
+            key-positions = <48 39>;
             layers = <0 1>;
         };
     };
