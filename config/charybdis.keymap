@@ -1,8 +1,8 @@
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
-
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <200>;
@@ -16,31 +16,31 @@
 
         mid {
             bindings = <&mkp MCLK>;
-            key-positions = <27 48>;
+            key-positions = <27 53>;
             layers = <0 1>;
         };
 
         pre {
             bindings = <&mkp MB4>;
-            key-positions = <26 48>;
+            key-positions = <26 53>;
             layers = <0 1>;
         };
 
         next {
             bindings = <&mkp MB5>;
-            key-positions = <28 48>;
+            key-positions = <28 53>;
             layers = <0 1>;
         };
 
         home {
             bindings = <&kp HOME>;
-            key-positions = <48 15>;
+            key-positions = <15 53>;
             layers = <0 1>;
         };
 
         end {
             bindings = <&kp END>;
-            key-positions = <48 39>;
+            key-positions = <39 53>;
             layers = <0 1>;
         };
     };
@@ -58,7 +58,7 @@
                                                         &mkp LCLK     &mkp RCLK       &kp LEFT_CONTROL
             >;
 
-                trackball-bindings = <&tmv_coarse>;
+            trackball-bindings = <&tmv_coarse>;
         };
 
         layer_1 {
@@ -71,7 +71,7 @@
                                                         &mkp LCLK     &mkp RCLK       &kp LEFT_CONTROL
             >;
 
-                trackball-bindings = <&tmv_coarse>;
+            trackball-bindings = <&tmv_coarse>;
         };
 
         layer_2 {
@@ -83,7 +83,6 @@
                         &trans        &trans        &trans        &trans       &trans
                                       &trans        &trans        &trans
             >;
-
         };
     };
 };
