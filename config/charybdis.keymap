@@ -17,58 +17,45 @@
         mid {
             bindings = <&mkp MCLK>;
             key-positions = <27 53>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         pre {
             bindings = <&mkp MB4>;
             key-positions = <26 53>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         next {
             bindings = <&mkp MB5>;
             key-positions = <28 53>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         home {
             bindings = <&kp HOME>;
             key-positions = <15 53>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         end {
             bindings = <&kp END>;
             key-positions = <39 53>;
-            layers = <0 1>;
+            layers = <0>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        layer_0 {
-            bindings = <
-&kp ESCAPE    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5          &kp NUMBER_6      &kp N7         &kp N8    &kp N9     &kp NUMBER_0  &kp DEL
-&kp PAGE_UP   &kp Q         &kp W         &kp E         &kp R         &kp T           &kp Y             &kp U          &kp I     &kp O      &kp P         &kp PAGE_DOWN
-&kp F2        &kp A         &kp S         &kp D         &kp F         &kp G           &kp H             &kp J          &kp K     &kp L      &kp UP_ARROW  &to 1
-&kp LEFT_ALT  &kp Z         &kp X         &kp C         &kp V         &kp B           &kp N             &kp M          &kp LEFT  &kp RIGHT  &kp DOWN      &kp TAB
-                                          &kp SPACE     &kp ENTER     &kp LEFT_GUI    &kp RIGHT_SHIFT   &kp BACKSPACE
-                                                        &mkp LCLK     &mkp RCLK       &kp LEFT_CONTROL
-            >;
-
-            trackball-bindings = <&tmv_coarse>;
-        };
-
         layer_1 {
             bindings = <
 &kp ESCAPE    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5          &kp NUMBER_6      &kp N7         &kp N8     &kp N9      &kp N0         &kp DEL
-&mo 2         &kp Q         &kp W         &kp E         &kp R         &kp T           &kp Y             &kp U          &kp I      &kp O       &kp P          &kp F4
-&to 0         &kp A         &kp S         &kp D         &kp F         &kp G           &kp H             &kp J          &kp K      &kp L       &kp SEMICOLON  &kp BSLH
+&mo 1         &kp Q         &kp W         &kp E         &kp R         &kp T           &kp Y             &kp U          &kp I      &kp O       &kp P          &kp F4
+&kp F2        &kp A         &kp S         &kp D         &kp F         &kp G           &kp H             &kp J          &kp K      &kp L       &kp SEMICOLON  &kp BSLH
 &kp LEFT_ALT  &kp Z         &kp X         &kp C         &kp V         &kp B           &kp N             &kp M          &kp COMMA  &kp PERIOD  &kp QUESTION   &kp TAB
                                           &kp SPACE     &kp ENTER     &kp LEFT_GUI    &kp LEFT_SHIFT    &kp BACKSPACE
-                                                        &mkp LCLK     &mkp RCLK       &kp LEFT_CONTROL
+                                                        &kp DOWN      &kp UP_ARROW    &kp LEFT_CONTROL
             >;
 
             trackball-bindings = <&tmv_coarse>;
