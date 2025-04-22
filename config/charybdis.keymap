@@ -14,8 +14,8 @@
     combos {
         compatible = "zmk,combos";
 
-        mid {
-            bindings = <&mkp MCLK>;
+        CAP {
+            bindings = <&kp CAPS>;
             key-positions = <27 53>;
             layers = <0>;
         };
@@ -41,6 +41,18 @@
         end {
             bindings = <&kp END>;
             key-positions = <39 53>;
+            layers = <0>;
+        };
+
+        LE {
+            bindings = <&kp LEFT_ARROW>;
+            key-positions = <53 37>;
+            layers = <0>;
+        };
+
+        RI {
+            bindings = <&kp RIGHT>;
+            key-positions = <53 40>;
             layers = <0>;
         };
     };
