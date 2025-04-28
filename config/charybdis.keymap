@@ -62,12 +62,12 @@
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &bootloader  &trans          &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans       &kp UP_ARROW    &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans       &kp DOWN_ARROW  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans          &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans       &trans
-                                &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans         &trans                  &bootloader      &trans          &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &kp PAGE_UP    &kp LEFT_PARENTHESIS    &kp RIGHT_ARROW  &kp UP_ARROW    &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &kp PAGE_DOWN  &kp RPAR                &kp LEFT         &kp DOWN_ARROW  &kp MINUS  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans         &trans                  &trans           &trans          &trans     &trans  &trans  &trans
+                        &trans  &trans         &trans                  &trans           &trans
+                                &trans         &trans                  &trans
             >;
         };
     };
