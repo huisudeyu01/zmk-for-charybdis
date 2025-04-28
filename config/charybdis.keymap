@@ -1,8 +1,7 @@
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
-
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <200>;
@@ -58,19 +57,18 @@
                                                         &mkp LCLK     &mkp RCLK       &kp LEFT_CONTROL
             >;
 
-                trackball-bindings = <&tmv_coarse>;
+            trackball-bindings = <&tmv_coarse>;
         };
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans  &trans        &trans        &trans        &bootloader &trans        &trans        &trans  &trans  &trans
-&trans  &trans  &trans  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans
-&trans  &trans  &trans  &trans        &trans        &trans        &trans      &trans        &trans        &trans  &trans  &trans
-&trans  &trans  &trans  &trans        &trans        &trans        &trans      &trans        &trans        &trans  &trans  &trans
-                        &trans        &trans        &trans        &trans      &trans
-                                      &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &bootloader  &trans          &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &kp UP_ARROW    &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &kp DOWN_ARROW  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans          &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans       &trans
+                                &trans  &trans    &trans
             >;
-
         };
     };
 };
