@@ -63,12 +63,12 @@
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans  &trans        &trans        &trans        &bootloader &trans        &trans        &trans  &trans  &trans
-&trans  &trans  &trans  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans
-&trans  &trans  &trans  &trans        &trans        &trans        &trans      &trans        &trans        &trans  &trans  &trans
-&trans  &trans  &trans  &trans        &trans        &trans        &trans      &trans        &trans        &trans  &trans  &trans
-                        &trans        &trans        &trans        &trans      &trans
-                                      &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &bootloader  &trans          &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &kp UP_ARROW    &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &kp DOWN_ARROW  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans          &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans       &trans
+                                &trans  &trans    &trans
             >;
 
         };
