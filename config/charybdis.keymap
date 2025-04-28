@@ -50,12 +50,12 @@
 
         layer_1 {
             bindings = <
-&kp ESCAPE    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5          &kp NUMBER_6      &kp N7         &kp N8     &kp N9      &kp N0         &kp DEL
-&mo 1         &kp Q         &kp W         &kp E         &kp R         &kp T           &kp Y             &kp U          &kp I      &kp O       &kp P          &kp BSLH
-&kp F2        &kp A         &kp S         &kp D         &kp F         &kp G           &kp H             &kp J          &kp K      &kp L       &kp F4         &kp SEMICOLON 
-&kp LEFT_ALT  &kp Z         &kp X         &kp C         &kp V         &kp B           &kp N             &kp M          &kp COMMA  &kp PERIOD  &kp QUESTION   &kp TAB
+&kp ESCAPE    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5          &kp NUMBER_6      &kp N7         &kp N8     &kp N9      &kp N0        &kp DEL
+&kp F2        &kp Q         &kp W         &kp E         &kp R         &kp T           &kp Y             &kp U          &kp I      &kp O       &kp P         &kp BSLH
+&kp F4        &kp A         &kp S         &kp D         &kp F         &kp G           &kp H             &kp J          &kp K      &kp L       &mo 1         &kp SEMICOLON
+&kp LEFT_ALT  &kp Z         &kp X         &kp C         &kp V         &kp B           &kp N             &kp M          &kp COMMA  &kp PERIOD  &kp QUESTION  &kp TAB
                                           &kp SPACE     &kp ENTER     &kp LEFT_GUI    &kp LEFT_SHIFT    &kp BACKSPACE
-                                                        &kp DOWN      &kp UP_ARROW    &kp LEFT_CONTROL
+                                                        &mkp LCLK     &mkp RCLK       &kp LEFT_CONTROL
             >;
 
                 trackball-bindings = <&tmv_coarse>;
@@ -63,12 +63,12 @@
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans  &trans        &trans        &trans        &bootloader  &trans        &trans        &trans  &trans  &trans
-&trans  &trans  &trans  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR    &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans
-&trans  &trans  &trans  &trans        &trans        &trans        &trans       &trans        &trans        &trans  &trans  &trans
-&trans  &trans  &trans  &trans        &trans        &trans        &trans       &trans        &trans        &trans  &trans  &trans
-                        &trans        &trans        &trans        &trans       &trans
-                                      &trans        &trans        &trans
+&trans  &trans  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR_ALL  &trans                  &bootloader      &bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans
+&trans  &trans  &trans        &trans        &kp PAGE_UP     &kp LEFT_PARENTHESIS    &kp RIGHT_ARROW  &kp UP_ARROW    &trans        &trans        &trans  &trans
+&trans  &trans  &trans        &trans        &kp PAGE_DOWN   &kp RPAR                &kp LEFT         &kp DOWN        &kp MINUS     &trans        &trans  &trans
+&trans  &trans  &trans        &trans        &trans          &trans                  &trans           &trans          &trans        &trans        &trans  &trans
+                              &trans        &trans          &trans                  &trans           &trans
+                                            &trans          &trans                  &trans
             >;
 
 
