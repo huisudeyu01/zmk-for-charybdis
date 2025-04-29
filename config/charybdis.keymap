@@ -16,31 +16,31 @@
 
         CAP {
             bindings = <&kp CAPS>;
-            key-positions = <27 48>;
+            key-positions = <27 53>;
             layers = <0>;
         };
 
         pre {
             bindings = <&mkp MB4>;
-            key-positions = <26 48>;
+            key-positions = <26 53>;
             layers = <0>;
         };
 
         next {
             bindings = <&mkp MB5>;
-            key-positions = <28 48>;
+            key-positions = <28 53>;
             layers = <0>;
         };
 
         home {
             bindings = <&kp HOME>;
-            key-positions = <15 48>;
+            key-positions = <15 53>;
             layers = <0>;
         };
 
         end {
             bindings = <&kp END>;
-            key-positions = <39 48>;
+            key-positions = <39 53>;
             layers = <0>;
         };
     };
