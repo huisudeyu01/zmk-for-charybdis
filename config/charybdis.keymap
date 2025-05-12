@@ -1,8 +1,8 @@
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
-
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <200>;
@@ -14,33 +14,33 @@
     combos {
         compatible = "zmk,combos";
 
-        CAP {
-            bindings = <&kp CAPS>;
-            key-positions = <27 53>;
+        MID {
+            bindings = <&mkp MCLK>;
+            key-positions = <27 48>;
             layers = <0>;
         };
 
         pre {
             bindings = <&mkp MB4>;
-            key-positions = <26 53>;
+            key-positions = <26 48>;
             layers = <0>;
         };
 
         next {
             bindings = <&mkp MB5>;
-            key-positions = <28 53>;
+            key-positions = <28 48>;
             layers = <0>;
         };
 
         home {
             bindings = <&kp HOME>;
-            key-positions = <15 53>;
+            key-positions = <15 48>;
             layers = <0>;
         };
 
         end {
             bindings = <&kp END>;
-            key-positions = <39 53>;
+            key-positions = <39 48>;
             layers = <0>;
         };
     };
@@ -54,23 +54,22 @@
 &kp F2        &kp Q         &kp W         &kp E         &kp R         &kp T           &kp Y             &kp U          &kp I      &kp O       &kp P         &kp BSLH
 &mkp RCLK     &kp A         &kp S         &kp D         &kp F         &kp G           &kp H             &kp J          &kp K      &kp L       &kp F4        &kp SEMICOLON
 &kp LEFT_ALT  &kp Z         &kp X         &kp C         &kp V         &kp B           &kp N             &kp M          &kp COMMA  &kp PERIOD  &kp QUESTION  &kp TAB
-                                          &kp SPACE     &kp ENTER     &kp LEFT_GUI    &kp LEFT_SHIFT    &kp BACKSPACE
-                                                        &mkp LCLK     &mo 1           &kp LEFT_CONTROL
+                                          &mkp LCLK     &kp SPACE     &kp LEFT_GUI    &kp LEFT_SHIFT    &kp BACKSPACE
+                                                        &kp ENTER     &mo 1           &kp LEFT_CONTROL
             >;
 
-                trackball-bindings = <&tmv_coarse>;
+            trackball-bindings = <&tmv_coarse>;
         };
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &bt BT_CLR      &bootloader     &trans           &trans         &trans      &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans           &trans         &trans      &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &kp LEFT_ARROW  &kp UP_ARROW     &kp PAGE_UP    &kp MINUS   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &kp RIGHT_ARROW &kp DOWN_ARROW   &kp PAGE_DOWN  &trans      &trans  &trans
-                        &trans  &trans  &kp LEFT_GUI    &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &bt BT_CLR      &bootloader      &trans          &trans         &trans    &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans           &trans          &trans         &trans    &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &kp LEFT_ARROW   &kp UP_ARROW    &kp PAGE_UP    &kp CAPS  &kp MINUS  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &kp RIGHT_ARROW  &kp DOWN_ARROW  &kp PAGE_DOWN  &trans    &trans     &trans
+                        &trans  &trans  &kp LEFT_GUI    &trans           &trans
                                 &trans  &trans          &trans
             >;
-
         };
     };
 };
