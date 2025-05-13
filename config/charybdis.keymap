@@ -14,9 +14,33 @@
     combos {
         compatible = "zmk,combos";
 
-        escc {
-            bindings = <&kp ESC>;
-            key-positions = <17 18>;
+        MID {
+            bindings = <&mkp MCLK>;
+            key-positions = <27 48>;
+            layers = <0>;
+        };
+
+        pre {
+            bindings = <&mkp MB4>;
+            key-positions = <26 48>;
+            layers = <0>;
+        };
+
+        next {
+            bindings = <&mkp MB5>;
+            key-positions = <28 48>;
+            layers = <0>;
+        };
+
+        home {
+            bindings = <&kp HOME>;
+            key-positions = <15 48>;
+            layers = <0>;
+        };
+
+        end {
+            bindings = <&kp END>;
+            key-positions = <39 48>;
             layers = <0>;
         };
     };
@@ -26,12 +50,12 @@
 
         layer_0 {
             bindings = <
-&kp LC(LEFT_SHIFT)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5       &kp NUMBER_6      &kp N7         &kp N8         &kp N9         &kp NUMBER_0   &kp PAGE_UP
-&kp ESCAPE          &kp Q         &kp W         &kp E         &kp R         &kp T        &kp Y             &kp U          &kp I          &kp O          &kp P          &kp PAGE_DOWN
-&kp CAPS            &kp A         &kp S         &kp D         &kp F         &kp G        &kp H             &kp J          &kp K          &kp L          &kp LC(PLUS)   &kp F2
-&kp LEFT_ALT        &kp Z         &kp X         &kp C         &kp V         &kp B        &kp N             &kp M          &kp LC(LS(C))  &kp LC(LS(V))  &kp LC(MINUS)  &kp TAB
-                                                &kp SPACE     &kp ENTER     &to 1        &kp LEFT_GUI      &kp BACKSPACE
-                                                              &mkp LCLK     &mkp RCLK    &kp LEFT_CONTROL
+&kp ESCAPE    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5          &kp NUMBER_6      &kp N7         &kp N8     &kp N9      &kp N0        &kp DEL
+&kp F2        &kp Q         &kp W         &kp E         &kp R         &kp T           &kp Y             &kp U          &kp I      &kp O       &kp P         &kp BSLH
+&mkp RCLK     &kp A         &kp S         &kp D         &kp F         &kp G           &kp H             &kp J          &kp K      &kp L       &kp F4        &kp SEMICOLON
+&kp LEFT_ALT  &kp Z         &kp X         &kp C         &kp V         &kp B           &kp N             &kp M          &kp COMMA  &kp PERIOD  &kp QUESTION  &kp TAB
+                                          &mkp LCLK     &kp SPACE     &kp ENTER       &kp LEFT_SHIFT    &kp BACKSPACE
+                                                        &mo 1         &kp LEFT_GUI    &kp LEFT_CONTROL
             >;
 
                 trackball-bindings = <&tmv_coarse>;
@@ -52,12 +76,12 @@
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans  &trans        &trans        &trans        &bootloader &trans        &trans        &trans  &trans  &trans
-&trans  &trans  &trans  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans
-&trans  &trans  &trans  &trans        &trans        &trans        &trans      &trans        &trans        &trans  &trans  &trans
-&trans  &trans  &trans  &trans        &trans        &trans        &trans      &trans        &trans        &trans  &trans  &trans
-                        &trans        &trans        &trans        &trans      &trans
-                                      &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &bt BT_CLR      &bootloader      &trans          &trans         &trans    &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans           &trans          &trans         &trans    &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &kp LEFT_ARROW   &kp UP_ARROW    &kp PAGE_UP    &kp CAPS  &kp MINUS  &kp SEMI
+&trans  &trans  &trans  &trans  &trans  &trans          &kp RIGHT_ARROW  &kp DOWN_ARROW  &kp PAGE_DOWN  &trans    &trans     &trans
+                        &trans  &trans  &trans          &trans           &trans
+                                &trans  &kp LEFT_GUI    &trans
             >;
 
         };
