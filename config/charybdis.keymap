@@ -54,8 +54,8 @@
 &kp F2        &kp Q         &kp W         &kp E         &kp R         &kp T           &kp Y             &kp U          &kp I      &kp O       &kp P         &kp BSLH
 &mkp RCLK     &kp A         &kp S         &kp D         &kp F         &kp G           &kp H             &kp J          &kp K      &kp L       &kp F4        &kp SEMICOLON
 &kp LEFT_ALT  &kp Z         &kp X         &kp C         &kp V         &kp B           &kp N             &kp M          &kp COMMA  &kp PERIOD  &kp QUESTION  &kp TAB
-                                          &mkp LCLK     &kp SPACE     &kp ENTER       &kp LEFT_SHIFT    &kp BACKSPACE
-                                                        &mo 1         &kp LEFT_GUI    &kp LEFT_CONTROL
+                                          &mkp LCLK     &kp SPACE     &kp LEFT_GUI    &kp LEFT_SHIFT    &kp BACKSPACE
+                                                        &kp ENTER     &mo 1           &kp LEFT_CONTROL
             >;
 
             trackball-bindings = <&tmv_coarse>;
@@ -65,10 +65,10 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &bt BT_CLR      &bootloader      &trans          &trans         &trans    &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans          &trans           &trans          &trans         &trans    &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &kp LEFT_ARROW   &kp UP_ARROW    &kp PAGE_UP    &kp CAPS  &kp MINUS  &kp SEMI
-&trans  &trans  &trans  &trans  &trans  &trans          &kp RIGHT_ARROW  &kp DOWN_ARROW  &kp PAGE_DOWN  &trans    &trans     &trans
-                        &trans  &trans  &trans          &trans           &trans
-                                &trans  &kp LEFT_GUI    &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &kp LEFT_ARROW   &kp UP_ARROW    &kp PAGE_UP    &kp CAPS  &kp PLUS   &kp SEMI
+&trans  &trans  &trans  &trans  &trans  &trans          &kp RIGHT_ARROW  &kp DOWN_ARROW  &kp PAGE_DOWN  &trans    &kp MINUS  &trans
+                        &trans  &trans  &kp LEFT_GUI    &trans           &trans
+                                &trans  &trans          &trans
             >;
         };
     };
