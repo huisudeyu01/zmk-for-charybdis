@@ -1,8 +1,8 @@
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
-
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <200>;
@@ -16,35 +16,34 @@
 
         MID {
             bindings = <&mkp MCLK>;
-            key-positions = <27 48>;
+            key-positions = <27 49>;
             layers = <0>;
         };
 
         pre {
             bindings = <&mkp MB4>;
-            key-positions = <26 48>;
+            key-positions = <26 49>;
             layers = <0>;
         };
 
         next {
             bindings = <&mkp MB5>;
-            key-positions = <28 48>;
+            key-positions = <28 49>;
             layers = <0>;
         };
 
         home {
             bindings = <&kp HOME>;
-            key-positions = <15 48>;
+            key-positions = <15 49>;
             layers = <0>;
         };
 
         end {
             bindings = <&kp END>;
-            key-positions = <39 48>;
+            key-positions = <39 49>;
             layers = <0>;
         };
     };
-
 
     keymap {
         compatible = "zmk,keymap";
@@ -55,11 +54,11 @@
 &kp F2        &kp Q         &kp W         &kp E         &kp R         &kp T           &kp Y             &kp U          &kp I      &kp O       &kp P         &kp BSLH
 &mkp RCLK     &kp A         &kp S         &kp D         &kp F         &kp G           &kp H             &kp J          &kp K      &kp L       &kp F4        &kp SEMICOLON
 &kp LEFT_ALT  &kp Z         &kp X         &kp C         &kp V         &kp B           &kp N             &kp M          &kp COMMA  &kp PERIOD  &kp QUESTION  &kp TAB
-                                          &mkp LCLK     &kp SPACE     &kp LEFT_GUI    &kp LEFT_SHIFT    &kp BACKSPACE
+                                          &kp SPACE     &mkp LCLK     &kp LEFT_GUI    &kp LEFT_SHIFT    &kp BACKSPACE
                                                         &kp ENTER     &mo 1           &kp LEFT_CONTROL
             >;
 
-                trackball-bindings = <&tmv_coarse>;
+            trackball-bindings = <&tmv_coarse>;
         };
 
         layer_1 {
@@ -70,9 +69,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans          &kp RIGHT_ARROW  &kp DOWN_ARROW  &kp PAGE_DOWN  &kp MINUS  &kp LC(MINUS)  &trans
                         &trans  &trans  &kp LEFT_GUI    &trans           &trans
                                 &trans  &trans          &trans
-
             >;
-
         };
     };
 };
