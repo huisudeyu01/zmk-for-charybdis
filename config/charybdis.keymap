@@ -63,11 +63,11 @@
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &bt BT_CLR      &bootloader      &trans          &trans         &trans         &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans           &kp INSERT      &kp CLCK       &trans         &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &kp LEFT_ARROW   &kp UP_ARROW    &kp PAGE_UP    &kp RC(PLUS)   &kp MINUS  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &kp RIGHT_ARROW  &kp DOWN_ARROW  &kp PAGE_DOWN  &kp RC(MINUS)  &kp SLASH  &trans
-                        &trans  &trans  &trans          &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &bt BT_CLR      &bootloader    &trans          &trans        &trans         &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans         &kp INSERT      &kp CLCK      &trans         &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &kp PAGE_UP    &kp LEFT_ARROW  &kp UP_ARROW  &kp RIGHT      &kp MINUS  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &kp PAGE_DOWN  &kp RC(PLUS)    &kp DOWN      &kp RC(MINUS)  &kp SLASH  &trans
+                        &trans  &trans  &trans          &trans         &trans
                                 &trans  &kp LEFT_GUI    &trans
             >;
 
