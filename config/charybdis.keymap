@@ -63,10 +63,10 @@
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &bt BT_CLR      &bootloader    &trans          &trans            &trans         &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &kp INS        &kp CAPS        &kp LA(UP_ARROW)  &trans         &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &kp PAGE_UP    &kp LEFT_ARROW  &kp UP_ARROW      &kp RIGHT      &kp MINUS  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &kp PAGE_DOWN  &kp RC(PLUS)    &kp DOWN          &kp RC(MINUS)  &kp SLASH  &trans
+&trans  &trans  &trans  &trans  &trans  &bt BT_CLR      &bootloader    &trans          &trans        &trans     &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans         &kp INS         &kp UP_ARROW  &trans     &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &kp PAGE_UP    &kp LEFT_ARROW  &kp CAPS      &kp RIGHT  &kp LA(UP)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &kp PAGE_DOWN  &trans          &kp DOWN      &trans     &trans      &trans
                         &trans  &trans  &trans          &trans         &trans
                                 &trans  &kp LEFT_GUI    &trans
             >;
@@ -76,10 +76,10 @@
 
         layer_2 {
             bindings = <
-&to 0   &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &msc SCROLL_UP    &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &msc SCROLL_DOWN  &trans  &trans  &trans  &trans
+&to 0   &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &msc SCRL_UP    &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &msc SCRL_DOWN  &trans           &trans  &trans
                         &trans  &trans  &trans    &trans  &trans
                                 &trans  &trans    &trans
             >;
