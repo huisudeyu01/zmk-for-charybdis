@@ -50,7 +50,7 @@
 
         layer_0 {
             bindings = <
-&kp ESCAPE    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5          &kp NUMBER_6      &kp N7         &kp N8     &kp N9      &kp N0        &kp DEL
+&to 2         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5          &kp NUMBER_6      &kp N7         &kp N8     &kp N9      &kp N0        &kp DEL
 &kp F2        &kp Q         &kp W         &kp E         &kp R         &kp T           &kp Y             &kp U          &kp I      &kp O       &kp P         &kp BSLH
 &mkp RCLK     &kp A         &kp S         &kp D         &kp F         &kp G           &kp H             &kp J          &kp K      &kp L       &kp F4        &kp SEMICOLON
 &kp LEFT_ALT  &kp Z         &kp X         &kp C         &kp V         &kp B           &kp N             &kp M          &kp COMMA  &kp PERIOD  &kp QUESTION  &kp TAB
@@ -63,12 +63,23 @@
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &bt BT_CLR      &bootloader    &trans          &trans            &trans         &trans          &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &kp INS        &kp CAPS        &kp LA(UP_ARROW)  &msc SCRL_UP   &msc SCRL_DOWN  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &kp PAGE_UP    &kp LEFT_ARROW  &kp UP_ARROW      &kp RIGHT      &kp MINUS       &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &kp PAGE_DOWN  &kp RC(PLUS)    &kp DOWN          &kp RC(MINUS)  &kp SLASH       &trans
+&trans  &trans  &trans  &trans  &trans  &bt BT_CLR      &bootloader    &trans          &trans            &trans         &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &kp INS        &kp CAPS        &kp LA(UP_ARROW)  &trans         &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &kp PAGE_UP    &kp LEFT_ARROW  &kp UP_ARROW      &kp RIGHT      &kp MINUS  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &kp PAGE_DOWN  &kp RC(PLUS)    &kp DOWN          &kp RC(MINUS)  &kp SLASH  &trans
                         &trans  &trans  &trans          &trans         &trans
                                 &trans  &kp LEFT_GUI    &trans
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+&to 0   &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &msc SCRL_UP  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans
+                                &trans  &trans    &trans
             >;
         };
     };
