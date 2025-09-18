@@ -76,12 +76,12 @@
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans            &trans  &trans            &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans            &trans  &trans            &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans            &trans  &msc SCROLL_UP    &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans            &trans  &msc SCROLL_DOWN  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans            &trans
-                                &trans  &trans    &kp LEFT_CONTROL
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans            &trans          &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans            &trans          &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT_CONTROL  &msc SCROLL_UP    &kp LEFT_SHIFT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT_CONTROL  &msc SCROLL_DOWN  &kp LEFT_SHIFT  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans
+                                &trans  &trans    &trans
             >;
 
             trackball-bindings = <&tmv_coarse>;
