@@ -69,7 +69,10 @@
             >;
 
             trackball-bindings = <&tmv_coarse>;
-trackball {
+            trackball {
+    resolution = <1000>; 
+    accel-divisor = <8>; 
+    scroll-divisor = <6>; 
     triggers {
               trigger = <&slp>;
     };
@@ -82,9 +85,6 @@ trackball {
         relative-max = <100>;
         multiplier = <1>;   
     };
-       resolution = <1000>; 
-       accel-divisor = <8>; 
-       scroll-divisor = <6>; 
 };
 };
         };
@@ -101,6 +101,9 @@ trackball {
 
             trackball-bindings = <&tmv_coarse>;
             trackball {
+    resolution = <1000>; 
+    accel-divisor = <8>; 
+    scroll-divisor = <6>; 
     triggers {
               trigger = <&slp>;
     };
@@ -128,6 +131,9 @@ trackball {
 
             trackball-bindings = <&tmv_coarse>;
             trackball {
+    resolution = <1000>; 
+    accel-divisor = <8>; 
+    scroll-divisor = <6>; 
     triggers {
               trigger = <&slp>;
     };
