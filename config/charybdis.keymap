@@ -1,8 +1,8 @@
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
-
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <200>;
@@ -46,14 +46,14 @@
     };
 
     behaviors {
-     slp: sleep_on_idle {
-        compatible = "zmk,behavior-sensor-sleep";
-        label = "SLEEP_ON_IDLE";
-        #sensor-cells = <0>;
-        sleep-timeout-ms = <1000>; 
-        enable-on-startup; 
+        slp: sleep_on_idle {
+            compatible = "zmk,behavior-sensor-sleep";
+            label = "SLEEP_ON_IDLE";
+            #sensor-cells = <0>;
+            sleep-timeout-ms = <1000>;
+            enable-on-startup;
+        };
     };
-};
 
     keymap {
         compatible = "zmk,keymap";
@@ -61,7 +61,7 @@
         layer_0 {
             bindings = <
 &kp LALT    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5          &kp NUMBER_6      &kp N7         &kp N8     &kp N9      &kp N0        &kp DEL
-&kp F2      &kp Q         &kp W         &kp E         &kp R         &kp T           &kp Y             &kp U          &kp I      &kp O       &kp P         &kp BSLH
+&lt 3 F2    &kp Q         &kp W         &kp E         &kp R         &kp T           &kp Y             &kp U          &kp I      &kp O       &kp P         &kp BSLH
 &kp ESCAPE  &kp A         &kp S         &kp D         &kp F         &kp G           &kp H             &kp J          &kp K      &kp L       &kp TAB       &kp SEMI
 &kp F4      &kp Z         &kp X         &kp C         &kp V         &kp B           &kp N             &kp M          &kp COMMA  &kp PERIOD  &kp QUESTION  &mkp RCLK
                                         &lt 2 SPACE   &mkp LCLK     &mo 1           &kp LEFT_SHIFT    &kp BACKSPACE
@@ -95,6 +95,17 @@
             >;
 
             trackball-bindings = <&tmv_coarse>;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans     &trans    &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans    &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans    &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans    &trans         &trans  &trans  &trans  &trans  &trans
+                        &trans  &mkp LCLK  &trans    &trans         &trans
+                                &trans     &trans    &kp LS(RCTRL)
+            >;
         };
     };
 };
