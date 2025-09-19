@@ -57,8 +57,7 @@
         compatible = "zmk,behavior-sensor-calibration";
         label = "SENSOR_CALIBRATION";
         #sensor-cells = <0>;
-        disable-after-calibration;
-};
+      };
     };
 };
 
