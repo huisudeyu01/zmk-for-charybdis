@@ -69,6 +69,20 @@
             >;
 
             trackball-bindings = <&tmv_coarse>;
+&trackball {
+    triggers {
+              trigger = <&slp>;
+    };
+       pointers-config {
+        accel-min = <50>;    
+        accel-max = <30000>; 
+    };
+    pointers-filter {
+        relative-min = <5>;  
+        relative-max = <100>;
+        multiplier = <1>;   
+    };
+};
         };
 
         layer_1 {
@@ -82,6 +96,20 @@
             >;
 
             trackball-bindings = <&tmv_coarse>;
+&trackball {
+    triggers {
+              trigger = <&slp>;
+    };
+       pointers-config {
+        accel-min = <50>;    
+        accel-max = <30000>; 
+    };
+    pointers-filter {
+        relative-min = <5>;  
+        relative-max = <100>;
+        multiplier = <1>;   
+    };
+};
         };
 
         layer_2 {
@@ -95,6 +123,20 @@
             >;
 
             trackball-bindings = <&tmv_coarse>;
+&trackball {
+    triggers {
+              trigger = <&slp>;
+    };
+       pointers-config {
+        accel-min = <50>;    
+        accel-max = <30000>; 
+    };
+    pointers-filter {
+        relative-min = <5>;  
+        relative-max = <100>;
+        multiplier = <1>;   
+    };
+};
         };
     };
 };
