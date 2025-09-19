@@ -68,7 +68,7 @@
                                                       &kp ENTER     &kp LEFT_GUI    &kp LEFT_CONTROL
             >;
 
-            trackball-bindings = <&tmv_coarse>;
+            trackball-bindings = <&tmv_fine>;
 trackball {
     triggers {
               trigger = <&slp>;
