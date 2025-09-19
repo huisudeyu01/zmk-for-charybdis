@@ -119,12 +119,12 @@
 
         layer_3 {
             bindings = <
+&trans  &trans  &trans  &trans  &trans     &trans    &tc            &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans    &trans         &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans    &trans         &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans    &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &trans    &trans         &trans  &trans  &trans  &trans  &trans
-                        &trans  &mkp LCLK  &trans    &trans         &trans
-                                &trans     &trans    &kp LS(RCTRL)
+                        &trans  &trans     &trans    &trans         &trans
+                                &trans     &trans    &trans
             >;
         };
     };
