@@ -52,12 +52,12 @@
         #sensor-cells = <0>;
         sleep-timeout-ms = <1000>; 
         enable-on-startup; 
+    };
     tc: sensor_calibration {
         compatible = "zmk,behavior-sensor-calibration";
         label = "SENSOR_CALIBRATION";
         #sensor-cells = <0>;
         disable-after-calibration;
-    };
 };
     };
 };
@@ -94,7 +94,7 @@ trackball {
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &bt BT_CLR      &bootloader    &trans          &trans            &trans     &trans      &tcal
+&trans  &trans  &trans  &trans  &trans  &bt BT_CLR      &bootloader    &trans          &trans            &trans     &trans      &tc
 &trans  &trans  &trans  &trans  &trans  &trans          &kp INS        &kp CAPS        &kp LA(UP_ARROW)  &trans     &trans      &trans
 &trans  &trans  &trans  &trans  &trans  &trans          &kp PAGE_UP    &kp LEFT_ARROW  &kp UP_ARROW      &kp RIGHT  &kp RC(F4)  &trans
 &trans  &trans  &trans  &trans  &trans  &trans          &kp PAGE_DOWN  &trans          &kp DOWN          &trans     &trans      &trans
