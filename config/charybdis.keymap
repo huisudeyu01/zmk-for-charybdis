@@ -45,15 +45,33 @@
         };
     };
 
+  / {
     behaviors {
-     slp: sleep_on_idle {
-        compatible = "zmk,behavior-sensor-sleep";
-        label = "SLEEP_ON_IDLE";
-        #sensor-cells = <0>;
-        sleep-timeout-ms = <1000>; 
-        enable-on-startup; 
+        // Sticky mouse buttons for drag
+        mkp_sticky_l: sticky_left_click {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY_LEFT_CLICK";
+            #binding-cells = <1>;
+            bindings = <&mkp>;
+            release-after-ms = <5000>;
+        };
+
+        mkp_sticky_m: sticky_middle_click {
+            compatible = "zmk,behavior-sticky-key";  
+            label = "STICKY_MIDDLE_CLICK";
+            #binding-cells = <1>;
+            bindings = <&mkp>;
+            release-after-ms = <5000>;
+        };
+
+        mkp_sticky_r: sticky_right_click {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY_RIGHT_CLICK"; 
+            #binding-cells = <1>;
+            bindings = <&mkp>;
+            release-after-ms = <5000>;
+        };
     };
-};
 
     keymap {
         compatible = "zmk,keymap";
