@@ -78,7 +78,7 @@ trackball {
         accel-max = <30000>; 
     };
     pointers-filter {
-        relative-min = <5>;  
+        relative-min = <10>;  
         relative-max = <100>;
         multiplier = <1>;   
     };
@@ -105,7 +105,7 @@ trackball {
         accel-max = <30000>; 
     };
     pointers-filter {
-        relative-min = <5>;  
+        relative-min = <10>;  
         relative-max = <100>;
         multiplier = <1>;   
     };
@@ -132,7 +132,7 @@ trackball {
         accel-max = <30000>; 
     };
     pointers-filter {
-        relative-min = <5>;  
+        relative-min = <10>;  
         relative-max = <100>;
         multiplier = <1>;   
     };
