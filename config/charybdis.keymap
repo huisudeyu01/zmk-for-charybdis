@@ -82,6 +82,10 @@ trackball {
         relative-max = <100>;
         multiplier = <1>;   
     };
+       resolution = <1000>; 
+       accel-divisor = <8>; 
+       scroll-divisor = <6>; 
+};
 };
         };
 
