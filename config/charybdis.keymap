@@ -10,6 +10,24 @@
     quick-tap-ms = <150>;
 };
 
+&trackball {
+    resolution = <1000>; 
+    accel-divisor = <8>; 
+    scroll-divisor = <6>; 
+    triggers {
+              trigger = <&slp>;
+    };
+       pointers-config {
+        accel-min = <50>;    
+        accel-max = <30000>; 
+    };
+    pointers-filter {
+        relative-min = <5>;  
+        relative-max = <100>;
+        multiplier = <1>;   
+    };
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -69,20 +87,7 @@
             >;
 
             trackball-bindings = <&tmv_coarse>;
-trackball {
-    triggers {
-              trigger = <&slp>;
-    };
-       pointers-config {
-        accel-min = <50>;    
-        accel-max = <30000>; 
-    };
-    pointers-filter {
-        relative-min = <5>;  
-        relative-max = <100>;
-        multiplier = <1>;   
-    };
-};
+
         };
 
         layer_1 {
@@ -96,20 +101,7 @@ trackball {
             >;
 
             trackball-bindings = <&tmv_coarse>;
-            trackball {
-    triggers {
-              trigger = <&slp>;
-    };
-       pointers-config {
-        accel-min = <50>;    
-        accel-max = <30000>; 
-    };
-    pointers-filter {
-        relative-min = <5>;  
-        relative-max = <100>;
-        multiplier = <1>;   
-    };
-};
+           
         };
 
         layer_2 {
@@ -123,20 +115,7 @@ trackball {
             >;
 
             trackball-bindings = <&tmv_coarse>;
-            trackball {
-    triggers {
-              trigger = <&slp>;
-    };
-       pointers-config {
-        accel-min = <50>;    
-        accel-max = <30000>; 
-    };
-    pointers-filter {
-        relative-min = <5>;  
-        relative-max = <100>;
-        multiplier = <1>;   
-    };
-};
+
         };
     };
 };
