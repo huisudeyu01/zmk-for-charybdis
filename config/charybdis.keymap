@@ -1,67 +1,53 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/mouse.h>
 
-&lt {
-    tapping-term-ms = <200>;
-    flavor = "balanced";
-    quick-tap-ms = <150>;
-};
-
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        MID {
-            bindings = <&mkp MCLK>;
-            key-positions = <27 49>;
-            layers = <0>;
-        };
-
-        pre {
-            bindings = <&mkp MB4>;
-            key-positions = <26 49>;
-            layers = <0>;
-        };
-
-        next {
-            bindings = <&mkp MB5>;
-            key-positions = <28 49>;
-            layers = <0>;
-        };
-
-        home {
-            bindings = <&kp HOME>;
-            key-positions = <15 49>;
-            layers = <0>;
-        };
-
-        end {
-            bindings = <&kp END>;
-            key-positions = <39 49>;
-            layers = <0>;
-        };
-    };
-
-   behaviors {
+    behaviors {
             slp: sleep_on_idle {
             compatible = "zmk,behavior-sensor-sleep";
             label = "SLEEP_ON_IDLE";
             #sensor-cells = <0>;
-            sleep-timeout-ms = <1000>; //
+            sleep-timeout-ms = <1000>;
             enable-on-startup;
         };
-
-            tcal: sensor_calibration {
+        
+           tcal: sensor_calibration {
             compatible = "zmk,behavior-sensor-calibration";
             label = "SENSOR_CALIBRATION";
             #sensor-cells = <0>;
         };
- };
+        
+           boot: bootloader {
+            compatible = "zmk,behavior-bootloader";
+            label = "BOOTLOADER";
+        };
+        rst: reset_settings {
+            compatible = "zmk,behavior-reset";
+            label = "RESET_SETTINGS";
+            type = <RESTART_BLE>;
+        };
+
+           to_mouse: sticky_layer {
+            compatible = "zmk,behavior-sticky-key";
+            label = "TO_MOUSE";
+            #binding-cells = <1>;
+            bindings = <&mo>;
+            quick-tap-ms = <150>;
+        };
+
+        lgui_tab: lgui_tab {
+            compatible = "zmk,behavior-macro-one-param";
+            label = "LGUI_TAB";
+            #binding-cells = <1>;
+            bindings = <&kp LG(TAB)>;
+        };
+    };
 
     &trackball {
-             triggers {
+          triggers {
             trigger = <&slp>;
         };
         pointers-config {
@@ -69,60 +55,83 @@
             accel-max = <30000>;
         };
         pointers-filter {
-            relative-min = <5>;
-            relative-max = <100>;
+            relative-min = <6>;
+            relative-max = <120>;
             multiplier = <1>;
         };
         
-        resolution = <800>; // 
-        accel-divisor = <8>; // 
-        scroll-divisor = <6>; // 
+           resolution = <750>;
+        accel-divisor = <10>;
+        scroll-divisor = <8>;
     };
-
 
     keymap {
         compatible = "zmk,keymap";
 
-        layer_0 {
+         default_layer {
             bindings = <
-&kp LALT    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5          &kp NUMBER_6      &kp N7         &kp N8     &kp N9      &kp N0        &kp DEL
-&kp F2      &kp Q         &kp W         &kp E         &kp R         &kp T           &kp Y             &kp U          &kp I      &kp O       &kp P         &kp BSLH
-&kp ESCAPE  &kp A         &kp S         &kp D         &kp F         &kp G           &kp H             &kp J          &kp K      &kp L       &kp TAB       &kp SEMI
-&kp F4      &kp Z         &kp X         &kp C         &kp V         &kp B           &kp N             &kp M          &kp COMMA  &kp PERIOD  &kp QUESTION  &mkp RCLK
-                                        &lt 2 SPACE   &mkp LCLK     &mo 1           &kp LEFT_SHIFT    &kp BACKSPACE
-                                                      &kp ENTER     &kp LEFT_GUI    &kp LEFT_CONTROL
+          
+                &kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T      &kp Y           &kp U         &kp I         &kp O         &kp P         &kp BSPC
+                &kp LCTRL       &kp A         &kp S         &kp D         &kp F         &kp G      &kp H           &kp J         &kp K         &kp L         &kp SEMI      &kp SQT
+                &kp LSHIFT      &kp Z         &kp X         &kp C         &kp V         &kp B      &kp N           &kp M         &kp COMM      &kp DOT       &kp FSLH      &kp RSFT
+                &kp LGUI        &kp LALT      &to_mouse 1   &mo 2         &kp MINUS     &kp EQL    &kp BSLH        &kp DEL       &kp LEFT      &kp DOWN      &kp UP        &kp RGHT
+                                            &kp CAPS        &kp ESC       &kp LBRC      &kp RBRC   &kp RET         &kp SPACE     &kp PGDN      &kp PGUP
+           
+               
             >;
-
-            trackball-bindings = <&tmv_coarse>;
-
-       };
-
-        layer_1 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &bt BT_CLR      &bootloader    &trans          &trans            &trans     &trans      &tcal
-&trans  &trans  &trans  &trans  &trans  &trans          &kp INS        &kp CAPS        &kp LA(UP_ARROW)  &trans     &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &kp PAGE_UP    &kp LEFT_ARROW  &kp UP_ARROW      &kp RIGHT  &kp RC(F4)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &kp PAGE_DOWN  &trans          &kp DOWN          &trans     &trans      &trans
-                        &trans  &trans  &trans          &trans         &trans
-                                &trans  &kp LEFT_GUI    &trans
-            >;
-
-            trackball-bindings = <&tmv_coarse>;
-
         };
 
-        layer_2 {
+        mouse_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans            &trans          &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans            &trans          &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT_CONTROL  &msc SCROLL_UP    &kp LEFT_SHIFT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT_CONTROL  &msc SCROLL_DOWN  &kp LEFT_SHIFT  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-                                &trans  &trans    &trans
+              
+                &none           &none         &none         &none         &none         &none       &none           &none         &none         &none         &none         &none
+                &none           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &out OUT_TOG  &none       &none           &wh_DOWN      &wh_UP        &wh_LEFT      &wh_RGHT      &none
+                &none           &none         &none         &none         &none         &none       &none           &none         &none         &none         &none         &none
+                &none           &none         &mo 1         &none         &none         &none       &none           &none         &none         &none         &none         &none
+                                              &none         &none         &none         &none       &kp MB2         &kp MB1       &kp MB3       &kp MB4
+          
+        
             >;
+        };
 
-            trackball-bindings = <&tmv_coarse>;
-       
+      
+        nav_layer {
+            bindings = <
+               
+                &boot           &tcal         &rst          &none         &none         &none      &kp HOME        &kp END       &none         &none         &none         &kp DEL
+                &kp C_VOL_UP    &kp C_VOL_DN  &kp C_MUTE    &kp F13       &kp F14       &kp F15    &kp LEFT        &kp DOWN      &kp UP        &kp RGHT      &none         &none
+                &kp LS(LGUI)    &kp LC(LGUI)  &none         &none         &none         &none      &kp MSEL_PREV   &kp MSEL_NXT  &kp C_PP      &kp C_STOP    &none         &none
+                &none           &none         &none         &mo 2         &none         &none      &none           &none         &none         &none         &none         &none
+                                              &none         &none         &none         &none      &none           &none         &kp C_VOL_UP  &kp C_VOL_DN
+                
+                                
+            >;
+        };
+
+   
+        num_layer {
+            bindings = <
+                &none           &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT      &kp CARET       &kp AMPS      &kp ASTR      &kp LPAR      &kp RPAR      &kp TILDE
+                &none           &kp NUM1      &kp NUM2      &kp NUM3      &kp NUM4      &kp NUM5       &kp MINUS       &kp PLUS      &kp EQUAL     &kp LBRC      &kp RBRC      &kp PIPE
+                &none           &kp NUM6      &kp NUM7      &kp NUM8      &kp NUM9      &kp NUM0       &kp UNDER       &kp COLON     &kp SEMI      &kp LBRC      &kp RBRC      &kp BSLH
+                &none           &none         &none         &none         &none         &none          &none           &none         &none         &none         &none         &none
+                                              &none         &none         &none         &none          &none           &none         &none         &none
+                
+                
+            >;
+        };
+
+        
+        game_layer {
+            bindings = <
+                &none           &kp Q         &kp W         &kp E         &kp R         &kp T      &kp Y           &kp U         &kp I         &kp O         &kp P         &kp BSPC
+                &kp LCTRL       &kp A         &kp S         &kp D         &kp F         &kp G      &kp H           &kp J         &kp K         &kp L         &kp SEMI      &kp SQT
+                &kp LSHIFT      &kp Z         &kp X         &kp C         &kp V         &kp B      &kp N           &kp M         &kp COMM      &kp DOT       &kp FSLH      &kp RSFT
+                &none           &none         &none         &none         &none         &none      &none           &none         &none         &none         &none         &none
+                                              &kp SPACE     &kp ESC       &kp TAB       &kp LALT   &kp RET         &kp SPACE     &kp R         &kp F
+                
+               
+            >;
         };
     };
 };
