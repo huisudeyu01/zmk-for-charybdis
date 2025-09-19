@@ -70,7 +70,7 @@
 
             trackball-bindings = <&tmv_coarse>;
             trackball {
-    resolution = <1000>; 
+    cpi = <1000>; 
     accel-divisor = <8>; 
     scroll-divisor = <6>; 
     triggers {
@@ -101,7 +101,7 @@
 
             trackball-bindings = <&tmv_coarse>;
             trackball {
-    resolution = <1000>; 
+    cpi = <1000>; 
     accel-divisor = <8>; 
     scroll-divisor = <6>; 
     triggers {
@@ -131,7 +131,7 @@
 
             trackball-bindings = <&tmv_coarse>;
             trackball {
-    resolution = <1000>; 
+    cpi = <1000>; 
     accel-divisor = <8>; 
     scroll-divisor = <6>; 
     triggers {
