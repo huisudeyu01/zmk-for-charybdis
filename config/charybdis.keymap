@@ -66,6 +66,12 @@
         #sensor-cells = <0>;
         sleep-timeout-ms = <1000>; 
         enable-on-startup; 
+     tc: sensor_calibration {
+        compatible = "zmk,behavior-sensor-calibration";
+        label = "SENSOR_CALIBRATION";
+        #sensor-cells = <0>;       
+    };
+};
     };
 };
 
