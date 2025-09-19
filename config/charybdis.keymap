@@ -44,7 +44,7 @@
             layers = <0>;
         };
     };
-};
+
     behaviors {
      slp: sleep_on_idle {
         compatible = "zmk,behavior-sensor-sleep";
