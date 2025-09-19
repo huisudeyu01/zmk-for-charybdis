@@ -2,27 +2,12 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
-
+#include <dt-bindings/zmk/outputs.h>
 
 &lt {
     tapping-term-ms = <200>;
     flavor = "balanced";
     quick-tap-ms = <150>;
-};
-
-&trackball {
-    triggers {
-              trigger = <&slp>;
-    };
-       pointers-config {
-        accel-min = <50>;    
-        accel-max = <30000>; 
-    };
-    pointers-filter {
-        relative-min = <5>;  
-        relative-max = <100>;
-        multiplier = <1>;   
-    };
 };
 
 / {
@@ -60,15 +45,41 @@
         };
     };
 
-    behaviors {
-     slp: sleep_on_idle {
-        compatible = "zmk,behavior-sensor-sleep";
-        label = "SLEEP_ON_IDLE";
-        #sensor-cells = <0>;
-        sleep-timeout-ms = <1000>; 
-        enable-on-startup; 
+   behaviors {
+            slp: sleep_on_idle {
+            compatible = "zmk,behavior-sensor-sleep";
+            label = "SLEEP_ON_IDLE";
+            #sensor-cells = <0>;
+            sleep-timeout-ms = <1200>; // 静止1.2秒后休眠
+            enable-on-startup;
+        };
+
+            tcal: sensor_calibration {
+            compatible = "zmk,behavior-sensor-calibration";
+            label = "SENSOR_CALIBRATION";
+            #sensor-cells = <0>;
+        };
+ };
+
+    &trackball {
+             triggers {
+            trigger = <&slp>;
+        };
+        pointers-config {
+            accel-min = <50>;
+            accel-max = <30000>;
+        };
+        pointers-filter {
+            relative-min = <5>;
+            relative-max = <100>;
+            multiplier = <1>;
+        };
+        
+        resolution = <800>; // 
+        accel-divisor = <8>; // 
+        scroll-divisor = <6>; // 
     };
-};
+
 
     keymap {
         compatible = "zmk,keymap";
@@ -89,7 +100,7 @@
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &bt BT_CLR      &bootloader    &trans          &trans            &trans     &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &bt BT_CLR      &bootloader    &trans          &trans            &trans     &trans      &tcal
 &trans  &trans  &trans  &trans  &trans  &trans          &kp INS        &kp CAPS        &kp LA(UP_ARROW)  &trans     &trans      &trans
 &trans  &trans  &trans  &trans  &trans  &trans          &kp PAGE_UP    &kp LEFT_ARROW  &kp UP_ARROW      &kp RIGHT  &kp RC(F4)  &trans
 &trans  &trans  &trans  &trans  &trans  &trans          &kp PAGE_DOWN  &trans          &kp DOWN          &trans     &trans      &trans
