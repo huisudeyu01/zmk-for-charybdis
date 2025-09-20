@@ -28,6 +28,7 @@
 	mosi-pin = <17>;
 	miso-pin = <17>; // same as mosi (3-wire spi)
 	cs-gpios = <&gpio0 20 GPIO_ACTIVE_LOW>;
+    knockdown = <10>
 };
 
 &trackball {
