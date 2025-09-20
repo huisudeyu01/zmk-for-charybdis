@@ -11,16 +11,15 @@
 
 / {
     behaviors {
-        // 新增：防抖鼠标按键行为定义
         mkp_l_knockdown: mouse_key_press_left_knockdown {
             compatible = "zmk,behavior-mouse-key-press";
             button = <LCLK>;
-            knockdown = <YES>; // 启用防抖
+            knockdown = <YES>; 
         };
         mkp_r_knockdown: mouse_key_press_right_knockdown {
             compatible = "zmk,behavior-mouse-key-press";
             button = <RCLK>;
-            knockdown = <YES>; // 启用防抖
+            knockdown = <YES>; 
         };
         
         slp: sleep_on_idle {
