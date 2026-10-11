@@ -1,4 +1,5 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 25
+
 #include <dt-bindings/zmk/mouse.h>
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -8,23 +9,17 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
-
-
-
 &lt {
     tapping-term-ms = <200>;
     flavor = "balanced";
     quick-tap-ms = <150>;
 };
 
-
 &msc {
     acceleration-exponent = <0>;      // 0
     time-to-max-speed-ms = <30>;       // 300
     delay-ms = <0>;                   // 0
 };
-
-
 
 / {
     // 上下滚动编码器行为
@@ -101,11 +96,11 @@
             >;
 
             sensor-bindings = <&scroll_vertical_encoder &scroll_horizontal_encoder>;
-                //&inc_dec_kp A B>;
-                //<&scroll_vertical_encoder>,
-                // 编码器1：上下滚动,,
-               //<&scroll_horizontal_encoder>;
 
+            //&inc_dec_kp A B>;
+            //<&scroll_vertical_encoder>,
+            // 编码器1：上下滚动,,
+            //<&scroll_horizontal_encoder>;
             // 编码器2：左右滚动
         };
 
@@ -118,11 +113,13 @@
                                                   &kp LEFT_ALT     &kp SPACE        &to 0         &none      &none
                                                                    &mkp MB1         &mkp MB2      &kp ENTER
             >;
-sensor-bindings = <&scroll_vertical_encoder>,
-                 //<&inc_dec_kp A B>;
-                //<&scroll_vertical_encoder>,
-                // 编码器1：上下滚动,,
-               <&scroll_horizontal_encoder>;
+
+            sensor-bindings =
+                <&scroll_vertical_encoder>,
+                //<&inc_dec_kp A B>;,
+                //<&scroll_vertical_encoder>,,
+                // 编码器1：上下滚动,,,
+                <&scroll_horizontal_encoder>;
         };
 
         layer_2 {
@@ -134,21 +131,23 @@ sensor-bindings = <&scroll_vertical_encoder>,
                         &trans  &trans  &trans    &trans  &trans
                                 &trans  &trans    &trans
             >;
-sensor-bindings = <&scroll_vertical_encoder>,
-                 //<&inc_dec_kp A B>;
-                //<&scroll_vertical_encoder>,
-                // 编码器1：上下滚动,,
-               <&scroll_horizontal_encoder>;
+
+            sensor-bindings =
+                <&scroll_vertical_encoder>,
+                //<&inc_dec_kp A B>;,
+                //<&scroll_vertical_encoder>,,
+                // 编码器1：上下滚动,,,
+                <&scroll_horizontal_encoder>;
         };
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-                                &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &mkp MB1  &mkp MB2    &trans  &trans
+                                &trans    &trans      &trans
             >;
         };
 
