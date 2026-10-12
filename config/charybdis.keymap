@@ -116,9 +116,9 @@
 
             sensor-bindings =
                 <&scroll_vertical_encoder>,
-                //<&inc_dec_kp A B>;,,,
-                //<&scroll_vertical_encoder>,,,,
-                // 编码器1：上下滚动,,,,,
+                //<&inc_dec_kp A B>;,,,,
+                //<&scroll_vertical_encoder>,,,,,
+                // 编码器1：上下滚动,,,,,,
                 <&scroll_horizontal_encoder>;
         };
 
@@ -134,9 +134,9 @@
 
             sensor-bindings =
                 <&scroll_vertical_encoder>,
-                //<&inc_dec_kp A B>;,,,
-                //<&scroll_vertical_encoder>,,,,
-                // 编码器1：上下滚动,,,,,
+                //<&inc_dec_kp A B>;,,,,
+                //<&scroll_vertical_encoder>,,,,,
+                // 编码器1：上下滚动,,,,,,
                 <&scroll_horizontal_encoder>;
         };
 
@@ -153,10 +153,10 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans       &trans  &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp TAB      &trans  &kp LC(TAB)      &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LS(TAB)  &trans  &kp LS(LC(TAB))  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans       &trans  &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans       &trans  &trans           &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp TAB      &trans  &kp LC(TAB)      &mmv MOVE_UP    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LS(TAB)  &trans  &kp LS(LC(TAB))  &mmv MOVE_DOWN  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans       &trans  &trans           &trans          &trans
                         &trans  &trans  &trans    &trans  &trans
                                 &trans  &trans    &trans
             >;
