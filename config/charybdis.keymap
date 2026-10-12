@@ -95,7 +95,7 @@
                                                &kp LEFT_CONTROL  &kp LEFT_SHIFT    &kp ENTER
             >;
 
-            sensor-bindings =  <&inc_dec_kp UP DOWN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp PG_UP PG_DN>;
 
             //&inc_dec_kp A B>;
             //<&scroll_vertical_encoder>,
@@ -106,19 +106,19 @@
 
         layer_1 {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5      &kp F6        &bootloader  &kp F8    &kp F9    &kp F10    &kp F11  &kp F12
-&none   &none   &none   &none   &none       &none         &none        &none     &kp UP    &none      &none    &none
-&none   &none   &none   &none   &bt BT_NXT  &bt BT_CLR    &none        &kp LEFT  &kp DOWN  &kp RIGHT  &none    &none
-&none   &none   &none   &none   &none       &none         &none        &none     &none     &none      &none    &none
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5      &kp F6        &bootloader  &kp F8    &kp F9    &kp F10    &kp F11     &kp F12
+&none   &none   &none   &none   &none       &none         &kp HOME     &none     &kp UP    &none      &none       &none
+&none   &none   &none   &none   &bt BT_NXT  &bt BT_CLR    &kp END      &kp LEFT  &kp DOWN  &kp RIGHT  &kp LA(F4)  &none
+&none   &none   &none   &none   &none       &none         &none        &none     &none     &kp CAPS   &none       &none
                         &none   &none       &none         &none        &none
                                 &none       &none         &none
             >;
 
             sensor-bindings =
                 <&scroll_vertical_encoder>,
-                //<&inc_dec_kp A B>;,,
-                //<&scroll_vertical_encoder>,,,
-                // 编码器1：上下滚动,,,,
+                //<&inc_dec_kp A B>;,,,
+                //<&scroll_vertical_encoder>,,,,
+                // 编码器1：上下滚动,,,,,
                 <&scroll_horizontal_encoder>;
         };
 
@@ -134,9 +134,9 @@
 
             sensor-bindings =
                 <&scroll_vertical_encoder>,
-                //<&inc_dec_kp A B>;,,
-                //<&scroll_vertical_encoder>,,,
-                // 编码器1：上下滚动,,,,
+                //<&inc_dec_kp A B>;,,,
+                //<&scroll_vertical_encoder>,,,,
+                // 编码器1：上下滚动,,,,,
                 <&scroll_horizontal_encoder>;
         };
 
@@ -153,10 +153,10 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans       &trans  &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp TAB      &trans  &kp LC(TAB)      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LS(TAB)  &trans  &kp LS(LC(TAB))  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans       &trans  &trans           &trans  &trans
                         &trans  &trans  &trans    &trans  &trans
                                 &trans  &trans    &trans
             >;
