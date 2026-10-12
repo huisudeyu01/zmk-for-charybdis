@@ -95,7 +95,7 @@
                                                &kp LEFT_CONTROL  &kp LEFT_SHIFT    &kp ENTER
             >;
 
-            sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp TAB LS(TAB)>;
 
             //&inc_dec_kp A B>;
             //<&scroll_vertical_encoder>,
@@ -114,8 +114,7 @@
                                 &none       &none         &none
             >;
 
-            sensor-bindings =
-                <&scroll_vertical_encoder>,
+            sensor-bindings = <&inc_dec_kp LC(TAB) LS(LC(TAB)) &inc_dec_kp MOVE_UP MOVE_DOWN>;
                 //<&inc_dec_kp A B>;,,,,
                 //<&scroll_vertical_encoder>,,,,,
                 // 编码器1：上下滚动,,,,,,
