@@ -153,8 +153,8 @@
         layer_4 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans       &trans  &trans           &trans          &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp TAB      &trans  &kp LC(TAB)      &mmv MOVE_UP    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LS(TAB)  &trans  &kp LS(LC(TAB))  &mmv MOVE_DOWN  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp TAB      &trans  &kp LC(TAB)      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LS(TAB)  &trans  &kp LS(LC(TAB))  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans       &trans  &trans           &trans          &trans
                         &trans  &trans  &trans    &trans  &trans
                                 &trans  &trans    &trans
