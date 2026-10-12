@@ -95,7 +95,7 @@
                                                &kp LEFT_CONTROL  &kp LEFT_SHIFT    &kp ENTER
             >;
 
-            sensor-bindings = <&scroll_vertical_encoder &scroll_horizontal_encoder>;
+            sensor-bindings =  <&inc_dec_kp UP DOWN &inc_dec_kp PG_UP PG_DN>;
 
             //&inc_dec_kp A B>;
             //<&scroll_vertical_encoder>,
