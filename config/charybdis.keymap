@@ -110,8 +110,7 @@
             >;
 
             sensor-bindings =
-                <&scroll_vertical_encoder>,
-                <&scroll_horizontal_encoder>;
+                <&inc_dec_kp LC(TAB) LS(LC(TAB))>,<&scroll_vertical_encoder> ;
         };
 
         layer_2 {
