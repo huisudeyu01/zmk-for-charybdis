@@ -125,20 +125,20 @@
 
             sensor-bindings =
                 <&scroll_vertical_encoder>,
-                //<&inc_dec_kp A B>;,,,,,,,,
-                //<&scroll_vertical_encoder>,,,,,,,,,
-                // 编码器1：上下滚动,,,,,,,,,,
+                //<&inc_dec_kp A B>;,,,,,,,,,
+                //<&scroll_vertical_encoder>,,,,,,,,,,
+                // 编码器1：上下滚动,,,,,,,,,,,
                 <&scroll_horizontal_encoder>;
         };
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans    &trans    &trans    &none   &none   &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &mkp MB1  &mkp MB2  &none     &trans  &trans
-                                  &trans    &trans    &trans
+&trans  &trans  &trans  &trans    &trans            &trans    &none   &none          &trans  &trans  &trans    &trans
+&trans  &trans  &trans  &trans    &trans            &trans    &trans  &trans         &trans  &trans  &trans    &trans
+&trans  &trans  &trans  &trans    &trans            &trans    &trans  &trans         &trans  &trans  &mkp MB2  &trans
+&trans  &trans  &trans  &trans    &trans            &trans    &trans  &trans         &trans  &trans  &trans    &trans
+                        &mkp MB1  &mo 1             &none     &trans  &kp BACKSPACE
+                                  &kp LEFT_CONTROL  &trans    &trans
             >;
         };
 
