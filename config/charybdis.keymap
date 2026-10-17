@@ -92,7 +92,7 @@
 &kp LG(LEFT_ARROW)  &kp A   &kp S   &kp D      &kp F             &kp G           &kp H            &kp J          &kp K      &kp L       &kp LEFT_GUI  &kp LG(RIGHT)
 &kp LS(LC(T))       &kp Z   &kp X   &kp C      &kp V             &kp B           &kp N            &kp M          &kp COMMA  &kp PERIOD  &kp QUESTION  &kp MINUS
                                     &kp SPACE  &mo 1             &to 1           &kp LWIN         &kp BACKSPACE
-                                               &kp LEFT_CONTROL  &kp LEFT_ALT    &kp RIGHT_SHIFT
+                                               &kp LEFT_CONTROL  &sk LEFT_ALT    &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp TAB LS(TAB)>;
