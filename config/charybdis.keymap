@@ -100,10 +100,10 @@
 
         layer_1 {
             bindings = <
-&none  &none  &none  &none  &none             &none    &bootloader  &none      &none     &none      &bt BT_NXT  &bt BT_CLR
-&none  &none  &none  &none  &none             &none    &kp HOME     &none      &kp UP    &none      &none       &none
-&none  &none  &none  &none  &none             &none    &kp END      &kp LEFT   &kp DOWN  &kp RIGHT  &kp LA(F4)  &none
-&none  &none  &none  &none  &none             &none    &none        &none      &none     &kp CAPS   &none       &none
+&none  &none  &none  &none  &none             &none    &bootloader  &none      &none     &none      &bt BT_NXT     &bt BT_CLR
+&none  &none  &none  &none  &none             &none    &kp HOME     &none      &kp UP    &none      &none          &none
+&none  &none  &none  &none  &none             &none    &kp END      &kp LEFT   &kp DOWN  &kp RIGHT  &kp LA(F4)     &none
+&none  &none  &none  &none  &none             &none    &none        &none      &none     &kp CAPS   &kp LS(LC(N))  &none
                      &none  &none             &to 0    &none        &kp ENTER
                             &kp LEFT_CONTROL  &none    &kp LA(UP)
             >;
@@ -115,10 +115,10 @@
 
         layer_2 {
             bindings = <
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none              &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none              &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &kp C_VOLUME_UP    &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &kp C_VOLUME_DOWN  &none  &none
                      &none  &none  &none    &none  &none
                             &none  &none    &none
             >;
@@ -126,11 +126,11 @@
 
         layer_3 {
             bindings = <
-&none  &none  &none  &none     &none             &none       &none  &none          &none  &none  &none  &none
-&none  &none  &none  &kp E     &none             &none       &none  &none          &none  &none  &kp P  &none
-&none  &kp S  &none  &none     &kp F             &none       &none  &none          &none  &none  &none  &none
-&none  &kp Z  &kp X  &kp C     &kp V             &kp B       &none  &none          &none  &none  &none  &none
-                     &mkp MB1  &none             &to 0       &none  &kp BACKSPACE
+&none  &none  &none  &none     &none             &none       &none  &none              &none  &none  &none  &none
+&none  &none  &none  &kp E     &none             &none       &none  &none              &none  &none  &kp P  &none
+&none  &kp S  &none  &none     &kp F             &none       &none  &none              &none  &none  &none  &none
+&none  &kp Z  &kp X  &kp C     &kp V             &kp B       &none  &none              &none  &none  &none  &none
+                     &mkp MB1  &none             &to 0       &none  &kp LC(BACKSPACE)
                                &kp LEFT_CONTROL  &mkp MB2    &none
             >;
         };
