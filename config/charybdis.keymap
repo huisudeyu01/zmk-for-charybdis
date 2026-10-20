@@ -108,9 +108,7 @@
                             &kp LEFT_CONTROL  &none    &kp LA(UP)
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp LC(TAB) LS(LC(TAB))>,
-                <&scroll_vertical_encoder>;
+            sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         layer_2 {
