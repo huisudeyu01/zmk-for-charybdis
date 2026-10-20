@@ -95,7 +95,7 @@
                                               &kp LEFT_CONTROL  &kp LEFT_SHIFT    &mt RIGHT_CONTROL ENTER
             >;
 
-            sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp TAB LS(TAB)>;
+            sensor-bindings = <&inc_dec_kp TAB LS(TAB) &inc_dec_kp UP DOWN>;
         };
 
         layer_1 {
@@ -109,8 +109,7 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
-                <&inc_dec_kp TAB LS(TAB)>;
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp LEFT RIGHT>;
         };
 
         layer_2 {
